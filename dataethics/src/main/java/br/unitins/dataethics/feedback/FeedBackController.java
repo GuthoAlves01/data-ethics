@@ -23,27 +23,15 @@ import java.util.stream.Collectors;
 public class FeedBackController {
     @Autowired
     private FeedbackRepository repository;
-    private EasyRandom generator = new EasyRandom();
 
-//    @GetMapping("/")
-//    @ResponseBody
-//    public String feedbackhello(){
-//        return "index.html";
-//    }
-//
-//    @GetMapping("/ajax")
-//    public String testeajax(String variaval){
-//        return variaval;
-//    }
-
-    @GetMapping("/")
+    @GetMapping("/list")
     @ResponseBody
     public ModelAndView feedback(Model model) {
         model.addAttribute("feedbacks", repository.findAll());
         return new ModelAndView("list");
     }
 
-    @PostMapping("/add")
+    @PostMapping("/public/add")
     @ResponseBody
     public RedirectView inserirFeedback(Feedback feedback, BindingResult result, Model model) {
         if (result.hasErrors()) {
@@ -51,10 +39,10 @@ public class FeedBackController {
         }
         repository.save(feedback);
 
-        return new RedirectView("/");
+        return new RedirectView("/list");
     }
 
-    @GetMapping("/feedback")
+    @GetMapping("/public/feedback")
     @ResponseBody
     public ModelAndView requestForm(Feedback feedback, Model model) {
         model.addAttribute("feedback", feedback);
