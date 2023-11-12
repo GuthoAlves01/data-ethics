@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org%22%3E/" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset=" UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+    <title>Formulário de Feedback</title>
+</head>
+<body >
+<div th:switch="${feedbacks}">
+    <table>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>mensagem</th>
+            <th>email</th>
+            <th>identificado</th>
+            <th>categoria</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="feedback : ${feedbacks}">
+            <td th:text="${feedback.id}"></td>
+            <td th:text="${feedback.nome}"></td>
+            <td th:text="${feedback.mensagem}"></td>
+            <td th:text="${feedback.email}"></td>
+            <td th:text="${feedback.isIdentificado}"></td>
+            <td th:text="${feedback.categoria}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

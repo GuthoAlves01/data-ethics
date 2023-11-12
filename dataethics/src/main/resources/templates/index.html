@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org%22%3E/" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset=" UTF-8">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<title>Formulário de Feedback</title>
+</head>
+<body >
+<div class="background">
+    <div class="principal">
+        <header>
+            <table>
+                <td>
+                    <figure>
+                        <img width="350" height="100" src="/image/logoDataethics.png">
+                    </figure>
+                </td>
+                <td><p style=" font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    <h1>Formulário de Feedback </h1>
+                    <h2>Nos diga o que você pensa!</h2></p></td>
+            </table>
+        </header>
+        <form action="#" th:action="@{/add}"
+              th:object="${feedback}" method="post">
+            <div class="formulario">
+
+                <input type="hidden" th:field="*{id}" id="id" name="id" ><br><br>
+
+                <label for="name">Nome:</label>
+                <input type="text" th:field="*{nome}" id="name" name="name" required><br><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" th:field="*{email}" id="email" name="email" ><br><br>
+
+                <label for="feedback">Mensagem:</label>
+                <textarea id="feedback" th:field="*{mensagem}" name="Mensagem" rows="4" ></textarea><br><br>
+
+                <label for="identificado">Identificado:</label>
+                <input type="checkbox" th:field="*{isIdentificado}" id="identificado" name="identificado" ><br><br>
+
+                <label for="categoria">categoria:</label>
+                <input type="text" id="categoria" th:field="*{categoria}" name="categoria" ><br><br>
+
+                <button type="submit">Enviar Feedback</button>
+            </div>
+            </br>
+            </br>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
