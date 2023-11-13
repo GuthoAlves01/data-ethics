@@ -7,24 +7,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/formulariocontato.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
 
         <!-- Título da página (aparece na aba) -->
         <title>Fale conosco</title>
     </head>
-    <header class="cabecalho">
-        <a href="index.html">
-          <img class="cabecalho-imagem" src="css/image/Design_sem_nome-removebg-preview.png" alt="Logo DataEtichs">
-        </a>
-        <nav class="cabecalho-menu">
-          <a class="cabecalho-menu-item" href="quemsomos.html">Equipe</a>
-          <a class="cabecalho-menu-item" href="codeJava.html">Code Java</a>
-        </nav>
-      </header>
 
-    <body>  
+    <body> 
+        <header class="cabecalho">
+            <a href="index.html">
+              <img class="cabecalho-imagem" src="css/image/Design_sem_nome-removebg-preview.png" alt="Logo DataEtichs">
+            </a>
+            <nav class="cabecalho-menu">
+              <a class="cabecalho-menu-item" href="quemsomos.html">Equipe</a>
+              <a class="cabecalho-menu-item" href="codeJava.html">Code Java</a>
+            </nav>
+          </header> 
 
-        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
         <div>
             <h1 id="titulo">Fale conosco</h1>
             <p id="subtitulo">Complete suas informações</p>
@@ -34,34 +33,57 @@
         <!-- Início do formulário -->
         <form>
 
-            <fieldset class="grupo">
-                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
-                <div class="campo">
-                    <label for="nome"><strong>Nome</strong></label>
-                    <input type="text" name="nome" id="nome">
+            <div class="background">
+                <div class="principal">
+                    <header>
+                        <table>
+                            <td>
+                                <figure>
+                                    <img width="350" height="100" src="/image/logoDataethics.png">
+                                </figure>
+                            </td>
+                            <td><p style=" font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                <h1>Formulário de Feedback </h1>
+                                <h2>Nos diga o que você pensa!</h2></p></td>
+                        </table>
+                    </header>
+                    <form action="#" th:action="@{/public/add}"
+                          th:object="${feedback}" method="post">
+                        <div class="formulario">
+            
+                            <input type="hidden" th:field="*{id}" id="id" name="id" ><br><br>
+            
+                            <label for="name">Nome:</label>
+                            <input type="text" th:field="*{nome}" id="name" name="name" required><br><br>
+            
+                            <label for="email">E-mail:</label>
+                            <input type="email" th:field="*{email}" id="email" name="email" ><br><br>
+            
+                            <label for="feedback">Mensagem:</label>
+                            <textarea id="feedback" th:field="*{mensagem}" name="Mensagem" rows="4" ></textarea><br><br>
+            
+                            <label for="identificado">Identificado:</label>
+                            <input type="checkbox" th:field="*{isIdentificado}" id="identificado" name="identificado" ><br><br>
+            
+                            <p> Os dados do seu cadastro serão usados como fonte de informação para melhorar nossos serviços e assim melhorar sempre nosso atendimento a você.
+                                Observando as regras estabelecidas na lei LEI Nº 13.709, DE 14 DE AGOSTO DE 2018.
+                                </p>
+
+                            <label for="categoria">Selecione uma opção:</label>
+                            <select id="categoria" name="categoria">
+                                <option value="opcao1">Elogio</option>
+                                <option value="opcao2">Reclamação</option>
+                                <option value="opcao3">Contato para trabalho</option>
+                                <option value="opcao4">Outros</option>
+                            </select>
+            
+                            <button type="submit">Enviar Feedback</button>
+                        </div>
+                        </br>
+                        </br>
+                    </form>
                 </div>
-
-                <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
-                <div class="campo">
-                    <label for="sobrenome"><strong>Sobrenome</strong></label>
-                    <input type="text" name="sobrenome" id="sobrenome">
-                </div>
-            </fieldset> 
-
-            <!-- Campo de email com-->
-            <div class="campo">
-                <label for="email"><strong>Email</strong></label>
-                <input type="email" name="email" id="email" required>
-            </div>
-            <!-- Caixa de texto -->
-            <div class="campo">
-                <br>
-                <label for="experiencia"><strong>Digite oque quer em breve entraremos em contato </strong></label>
-                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
-            </div>
-
-            <!-- Botão para enviar o formulário -->
-            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+            </div>           
 
         </form>
 
