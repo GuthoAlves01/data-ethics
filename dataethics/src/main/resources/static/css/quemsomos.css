@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-size: 100%;
+  background:  rgb(8, 4, 50);
+  color: white;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24px;
+}
+
+.cabecalho-imagem {
+  width: 72px;
+  height: 72px;
+  display: auto;
+}
+
+.cabecalho-menu {
+  display: flex;
+  gap: 32px;
+}
+
+.cabecalho-menu-item {
+  font-family: 'Sarala', sans-serif;
+  color: #FFF2E7;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.quem-somos-container {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .container h1{
+    margin-bottom: 48px;
+    border-top: 0.4px solid #FFF2E7;
+  }
+
+  .membro {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+  }
+
+  .membro img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+
+  .membro p {
+    font-style: italic;
+    color: #fdfdfd;
+  }
+
+  .partequesomos{
+    display: grid;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .textodata h2 {
+    display: inline-block;
+    margin: 0 10px;
+
+  }
+  .textodata p {
+    display: inline-block;
+    margin: 0 20px;
+
+  }
+
+
+/* Adicionando regras para tornar o layout responsivo */
+
+@media only screen and (min-width: 768px) {
+  .conteudo-principal {
+    flex-direction: row;
+  }
+
+  .conteudo-principal-escrito {
+    text-align: left;
+  }
+
+  .conteudo-principal-imagem {
+    margin-top: 0;
+    margin-left: 24px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .conteudo {
+    padding: 40px;
+  }
+
+  .conteudo-principal-escrito-titulo {
+    font-size: 80px;
+  }
+
+  .conteudo-principal-escrito-subtitulo {
+    font-size: 30px;
+  }
+
+  .conteudo-principal-escrito-botao {
+    width: 220px;
+    height: 70px;
+    font-size: 28px;
+  }
+}
