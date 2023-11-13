@@ -10,15 +10,15 @@
 </head>
 
 <body>
-  <header class="cabecalho">
-    <a href="index.html">
-      <img class="cabecalho-imagem" src="css/image/Design_sem_nome-removebg-preview.png" alt="Logo DataEtichs">
-    </a>
-    <nav class="cabecalho-menu">
-      <a class="cabecalho-menu-item" href="quemsomos.html">Equipe</a>
-      <a class="cabecalho-menu-item" href="codeJava.html">Code Java</a>
-    </nav>
-  </header>
+<header class="cabecalho">
+  <a th:href="@{/index}">
+    <img class="cabecalho-imagem" th:src="@{/image/Design_sem_nome-removebg-preview.png}" alt="Logo DataEtichs">
+  </a>
+  <nav class="cabecalho-menu">
+    <a class="cabecalho-menu-item" th:href="@{/quem-somos}">Equipe</a>
+    <a class="cabecalho-menu-item" th:href="@{/code-java}">Code Java</a>
+  </nav>
+</header>
   
     <h1>Códigos Java Implementados</h1>
    

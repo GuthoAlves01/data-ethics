@@ -10,16 +10,16 @@
 </head>
 
 <body>
-  <header class="cabecalho">
-    <a href="index.html">
-      <img class="cabecalho-imagem" src="css/image/Design_sem_nome-removebg-preview.png" alt="Logo DataEtichs">
+<header class="cabecalho">
+    <a th:href="@{/index}">
+        <img class="cabecalho-imagem" th:src="@{/image/Design_sem_nome-removebg-preview.png}" alt="Logo DataEtichs">
     </a>
     <nav class="cabecalho-menu">
-      <a class="cabecalho-menu-item" href="quemsomos.html">Equipe</a>
-      <a class="cabecalho-menu-item" href="codeJava.html">Code Java</a>
+        <a class="cabecalho-menu-item" th:href="@{/quem-somos}">Equipe</a>
+        <a class="cabecalho-menu-item" th:href="@{/code-java}">Code Java</a>
     </nav>
-  </header>
-  
+</header>
+
     <div class="container">
         <h1>Quem Somos</h1>
         <p>A DataEthics é uma startup dedicada a desenvolver softwares com uma abordagem ética e centrada no usuário.</p>
@@ -31,22 +31,22 @@
         <p>Composta por jovens talentosos e recém-formados, nossa equipe traz uma combinação única de habilidades e paixão pela tecnologia.</p>
         <div class="quem-somos-container">
             <div class="membro">
-              <img src="css/image/Bruno.png" alt="Membro 1">
+              <img th:src="@{/image/Bruno.png}" alt="Membro 1">
               <p>comentario sobre a pessoa 1</p>
             </div>
         
             <div class="membro">
-              <img src="css/image/Diana.png" alt="Membro 2">
+              <img th:src="@{/image/Diana.png}" alt="Membro 2">
               <p>Comentário sobre a pessoa 2.</p>
             </div>
         
             <div class="membro">
-              <img src="css/image/Guthemberg.png" alt="Membro 3">
+              <img th:src="@{/image/Guthemberg.png}" alt="Membro 3">
               <p>Comentário sobre a pessoa 3.</p>
             </div>
         
             <div class="membro">
-              <img src="css/image/Kauan.png" alt="Membro 4">
+              <img th:src="@{/image/Kauan.png}" alt="Membro 4">
               <p>Kauãn Kelvin Mendes da Costa
                 DEVELOPER STUDENT / Palmas 🇧🇷
 
@@ -55,7 +55,7 @@
             </div>
         
             <div class="membro">
-              <img src="css/image/Pedro.png" alt="Membro 5">
+              <img th:src="@{/image/Pedro.png}" alt="Membro 5">
               <p>Comentário sobre a pessoa 5.</p>
             </div>
           </div>
