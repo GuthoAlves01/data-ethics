@@ -50,19 +50,7 @@ header {
     border-top: 0.4px solid #FFF2E7;
 }
 
-/* Elementos com o ID "titulo" */
-#titulo {
-    font-family: sans-serif;
-    color: #ffffff;
-    margin-left: 7%;
-}
 
-/* Elementos com o ID "subtitulo" */
-#subtitulo {
-    font-family: sans-serif;
-    color: #f6f6f6;
-    margin-left: 10%;
-}
 
 #check {
     display: inline-block;
@@ -77,6 +65,27 @@ body {
     margin-left: 10%;
     margin-top: 2%;
     justify-content: center;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 100% da altura da viewport */
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+p {
+    margin-top: 10px;
+    line-height: 1.6;
 }
 
 /* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
