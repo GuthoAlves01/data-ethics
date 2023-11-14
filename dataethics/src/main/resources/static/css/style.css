@@ -1,103 +1,87 @@
-/*html, body {*/
-/*    height: 100%;*/
-/*    min-height: 100%;*/
-/*    background-size: cover;*/
-/*    background-color: rgb(8, 4, 50);*/
-/*    !*background-position: center;*!*/
-/*    background-attachment: fixed; !* Isso garante que a imagem de fundo permaneça fixa ao rolar a página *!*/
-/*    color: #a90773; !* Cor do texto para garantir contraste adequado *!*/
-/*}*/
 
-/*.background {*/
-/*    background: url(../image/background.png);*/
-/*    opacity: 0.5;*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
-
-/*.principal {*/
-/*    width: 40%;*/
-/*    height: 200px;*/
-/*    text-align: center;*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    margin: auto;*/
-/*}*/
-
-/*.header {*/
-/*    background-color: #39336b;*/
-/*    color: #a90773;*/
-/*    padding: 5px;*/
-/*    text-align: center;*/
-/*    display: inline-block;*/
-/*}*/
-/*.formulario {*/
-/*    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
-/*    font-size: 25px;*/
-/*    text-align: justify;*/
-/*    border: 5px solid #39336b;*/
-/*    border-radius: 2%;*/
-/*    color: #fdfcfd;*/
-/*    background-color: bisque;*/
-/*}*/
-
-body {
-    background-image: url(../image/background.png);
-    opacity: 50%;
-    background-size: cover;
-    background-color: rgb(8, 4, 50);
-    background-position: center;
-    background-attachment: fixed; /* Isso garante que a imagem de fundo permaneça fixa ao rolar a página */
-    color: #a90773; /* Cor do texto para garantir contraste adequado */
+body, h1, h2, p, table, td, th, tr, input, textarea, select, button {
+  margin: 0;
+  padding: 0;
 }
 
-.header {
-    background-color: #39336b;
-    color: #a90773;
-    padding: 5px;
-    text-align: center;
-    display: inline-block;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(8, 4, 50);
+  color: #333;
 }
 
 .cabecalho {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 24px;
-  }
-  
-  .cabecalho-imagem {
-    width: 72px;
-    height: 72px;
-    display: auto;
-  }
-  
-  .cabecalho-menu {
-    display: flex;
-    gap: 32px;
-  }
-  
-  .cabecalho-menu-item {
-    font-family: 'Sarala', sans-serif;
-    color: #FFF2E7;
-    font-weight: 400;
-    font-size: 18px;
-  }
-  
-.formulario {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
-    text-align: justify;
-    border: 5px solid #39336b;
-    width: 40%;
-    height: 200px;
-    border-radius: 2%;
-    color: #fdfcfd;
+  background-color:rgb(8, 4, 50);
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.cabecalho-imagem {
+  max-width: 100px;
+}
+
+.cabecalho-menu {
+  display: flex;
+}
+
+.cabecalho-menu-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+#titulo {
+  color: #333;
+}
+
+#subtitulo {
+  color: #555;
+}
+
+.background {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.principal {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+formulario {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color:rgb(8, 4, 50);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(8, 4, 50);
 }
