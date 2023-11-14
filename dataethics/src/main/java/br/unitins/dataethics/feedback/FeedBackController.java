@@ -2,6 +2,8 @@ package br.unitins.dataethics.feedback;
 
 import br.unitins.dataethics.entity.Feedback;
 import br.unitins.dataethics.entity.FeedbackRepository;
+import br.unitins.dataethics.service.FeedbackService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +17,7 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 public class FeedBackController {
     @Autowired
-    private FeedbackRepository repository;
+    private FeedbackService service;
 //
 //    index / e /index
 //    formulario /formulario
@@ -33,7 +35,6 @@ public class FeedBackController {
     @GetMapping("/index")
     @ResponseBody
     public ModelAndView index(Model model) {
-//        model.addAttribute("feedbacks", repository.findAll());
         return new ModelAndView("index");
     }
 
@@ -46,11 +47,11 @@ public class FeedBackController {
 
     @PostMapping("/feedback/add")
     @ResponseBody
-    public RedirectView inserirFeedback(Feedback feedback, BindingResult result, Model model) {
+    public RedirectView inserirFeedback(@Valid Feedback feedback, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            return new RedirectView("formulariocontato");
+            return new RedirectView("/feedback");
         }
-        repository.save(feedback);
+        service.salvar(feedback);
 
         return new RedirectView("/index");
     }
@@ -69,7 +70,7 @@ public class FeedBackController {
     @GetMapping("/list")
     @ResponseBody
     public ModelAndView feedback(Model model) {
-        model.addAttribute("feedbacks", repository.findAll());
+        model.addAttribute("feedbacks", service.buscarTudo());
         return new ModelAndView("list");
     }
 
