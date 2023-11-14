@@ -47,7 +47,7 @@ public class FeedBackController {
 
     @PostMapping("/feedback/add")
     @ResponseBody
-    public RedirectView inserirFeedback(@Valid Feedback feedback, BindingResult result, Model model) {
+    public RedirectView inserirFeedback(Feedback feedback, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return new RedirectView("/feedback");
         }
