@@ -45,10 +45,33 @@ body {
     text-align: center;
   }
 
-  .container h1{
-    margin-bottom: 48px;
-    border-top: 0.4px solid #FFF2E7;
-  }
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+h1, h2 {
+    color: #000000;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+p {
+    color: #000000;
+    margin-top: 10px;
+    line-height: 1.6;
+}
 
   .membro {
     display: inline-block;
@@ -67,7 +90,7 @@ body {
 
   .membro p {
     font-style: italic;
-    color: #fdfdfd;
+    color: #000000;
   }
 
   .partequesomos{
