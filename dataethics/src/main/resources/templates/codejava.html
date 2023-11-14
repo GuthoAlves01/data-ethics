@@ -24,20 +24,80 @@
    
     
       <div class="code-container">
-        <img src="Torneio dos Sacolinhas.png" alt="Imagem de Código" class="code-image">
-        <p class="code-comment">Comentário sobre a imagem de código vai aqui. Este é apenas um exemplo.</p>
+        <img th:src="@{/image/codigo1.jpeg}" alt="Imagem de Código" class="code-image">
+        <p class="code-comment">Este é um código em Java usando a biblioteca Lombok. O objetivo deste código é representar uma classe de entidade chamada Feedback. Esta classe armazenará informações fornecidas pelos usuários por meio de um formulário de feedback.
+          No entanto, existem algumas coisas importantes a serem mencionadas sobre o código.
+
+          A anotação @Getter na classe indica que o Lombok deve gerar automaticamente os métodos getter para todos os atributos da classe. Isso permite que outros códigos acessem facilmente os valores dos atributos.
+          
+          A anotação @Setter na classe indica que o Lombok deve gerar automaticamente os métodos setter para todos os atributos da classe. Isso permite que outros códigos modifiquem facilmente os valores dos atributos.
+          
+          A anotação @Entity na classe indica que esta classe é uma entidade JPA. Uma entidade JPA é uma classe Java que representa uma tabela em um banco de dados relacional.
+          
+          A anotação @Id na frente do atributo id indica que este atributo é a chave primária da tabela Feedback no banco de dados. A anotação @GeneratedValue(strategy = GenerationType.IDENTITY) na frente do atributo id indica que o valor deste atributo será gerado automaticamente pelo banco de dados.
+          
+          Além disso, os atributos da classe (nome, mensagem, email, isIdentificado e categoria) representam os diferentes campos que um usuário pode preencher no formulário de feedback. O atributo isIdentificado é um Boolean que indica se o usuário que enviou o feedback optou</p>
       </div>
       <div class="code-container">
-        <img src="wallpaperflare.com_wallpaper.jpg" alt="Imagem de Código" class="code-image">
-        <p class="code-comment">Comentário sobre a imagem de código vai aqui. Este é apenas um exemplo.</p>
+        <img th:src="@{/image/codigo2.jpeg}" alt="Imagem de Código" class="code-image">
+        <p class="code-comment">1 FeedbackRepository.java
+
+          Este arquivo define a interface FeedbackRepository, que estende a interface CrudRepository do Spring Data JPA.
+          
+          Aqui estão os detalhes:
+          
+          @Repository: Este é um estereótipo do Spring que indica que a classe é um repositório. Os repositórios são responsáveis por gerenciar o acesso aos dados e a manipulação de entidades.
+          
+          extends CrudRepository<Feedback, Long>: Esta linha indica que a interface FeedbackRepository estende a interface CrudRepository. O CrudRepository é uma interface base que fornece implementações padrão de CRUD (Create, Read, Update, Delete) para entidades.
+          
+          A classe Feedback representa a entidade que está sendo gerenciada pelo repositório.
+          
+          O tipo Long é o tipo de identificador da entidade Feedback.
+          
+          A interface FeedbackRepository estende a funcionalidade do CrudRepository, mas neste caso, não há nenhum método adicional definido. O Spring Data JPA fornece implementações padrão para todos os métodos de CRUD.
+          
+          O código em questão define uma interface para um repositório de feedbacks, que são usados ​​por Guthemberg Alves em suas implementações de uso de dados éticos.
+          
+          : 2 usages guthemberg alves
+          
+          Neste arquivo, a interface FeedbackRepository é usada por Guthemberg Alves para implementar seu algoritmo de classificação de dados. O Spring Data JPA automaticamente implementa a interface e gera uma implementação pronta para uso do repositório de feedbacks.
+          
+          Além disso, Guthemberg Alves usa a interface FeedbackRepository em outras partes de seu código para adicionar, buscar, atualizar e excluir feedbacks do banco de dados.
+          
+          Em resumo, o código define uma interface para um repositório de feedbacks que é usado pelo algoritmo de classificação de dados de Guthemberg
+          
+          
+          
+          </p>
       </div>
       <div class="code-container">
-        <img src="caminho/para/sua/imagem-de-codigo.jpg" alt="Imagem de Código" class="code-image">
-        <p class="code-comment">Comentário sobre a imagem de código vai aqui. Este é apenas um exemplo.</p>
+        <img th:src="@{/image/codigo3.png}" alt="Imagem de Código" class="code-image">
+        <p class="code-comment">Neste código, temos uma aplicação Spring Boot que implementa um sistema de feedback. Ela utiliza um banco de dados relacional (H2) para armazenar os feedbacks enviados pelos usuários. A aplicação conta com várias rotas para exibir diferentes páginas.
+
+          As rotas e seus respectivos mapeamentos são os seguintes:
+          
+          Rota /: redireciona para a rota /index.
+          Rota /index: exibe a página inicial.
+          Rota /feedback: exibe o formulário de feedback.
+          Rota /feedback/add: salva o feedback no banco de dados.
+          Rota /quem-somos: exibe a página "Quem somos".
+          Rota /code-java: exibe a página "Code Java".
+          Rota /list: exibe a lista de feedbacks salvos no banco de dados.
+          A lógica de negócios é implementada na classe FeedbackService, que utiliza o repositório FeedbackRepository para realizar as operações no banco de dados.
+          
+          A anotação @Autowired é usada para injetar as dependências das classes. A anotação @GetMapping é usada para mapear a rota que responde a um pedido GET, e a anotação @PostMapping é usada para mapear a rota que responde a um pedido POST.</p>
       </div>
       <div class="code-container">
-        <img src="caminho/para/sua/imagem-de-codigo.jpg" alt="Imagem de Código" class="code-image">
-        <p class="code-comment">Comentário sobre a imagem de código vai aqui. Este é apenas um exemplo.</p>
+        <img th:src="@{/image/codigo4.png}" alt="Imagem de Código" class="code-image">
+        <p class="code-comment">Neste código, a classe FeedbackService possui duas ações principais: salvar e buscarTudo.
+
+          A ação salvar() recebe um objeto Feedback como parâmetro e, usando o objeto FeedbackRepository injetado por meio do Spring, armazena esse objeto no banco de dados.
+          A ação buscarTudo() não recebe parâmetros e, usando o objeto FeedbackRepository injetado, retorna todos os objetos Feedback armazenados no banco de dados.
+          O código é dividido em duas partes principais:
+          
+          Primeiro, as entidades Feedback e FeedbackRepository são importadas.
+          Em seguida, a classe FeedbackService é criada. Essa classe possui um objeto FeedbackRepository injetado por meio do Spring.
+          Além disso, o código é anotado com a anotação @Service, que indica que a classe é um componente do Spring.</p>
       </div>
 </body>
 </html>

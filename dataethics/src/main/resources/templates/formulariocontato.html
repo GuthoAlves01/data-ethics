@@ -24,12 +24,6 @@
         </nav>
     </header>
 
-        <div>
-            <h1 id="titulo">Fale conosco</h1>
-            <p id="subtitulo">Complete suas informações</p>
-            <br>
-        </div>
-
         <!-- Início do formulário -->
         <form>
 
@@ -41,11 +35,10 @@
                                 <figure>
                                     <img width="350" height="100" src="/image/logoDataethics.png">
                                 </figure>
-                            </td>
-                            <td><p style=" font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                                <h1>Formulário de Feedback </h1>
-                                <h2>Nos diga o que você pensa!</h2></p></td>
                         </table>
+                        <div class="texto">
+                            <h1>Formulário de Feedback </h1>
+                            <h2>Nos diga o que você pensa!</h2></div>
                     </header>
                     <form action="#" th:action="@{/public/add}"
                           th:object="${feedback}" method="post">

@@ -50,7 +50,7 @@ h1 {
     border-top: 0.4px solid #FFF2E7;
   text-align: center;
   margin: 20px 0;
-  color: #333;
+  color: #ffffff;
 }
 
 .code-container {
@@ -68,7 +68,7 @@ h1 {
 }
 
 .code-comment {
-  color: #555;
+  color: #ffffff;
   font-size: 16px;
 }
 
