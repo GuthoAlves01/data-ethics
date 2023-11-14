@@ -14,38 +14,31 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
-@Controller
+@Controller("/")
 public class FeedBackController {
     @Autowired
     private FeedbackService service;
-//
-//    index / e /index
-//    formulario /formulario
-    //    botão salvar /formulario/add
-//    quemsomos /quemsomos
-//    codejava /codejava
-//    listar - autenticado /auth/listar
 
-    @GetMapping("/")
+    @GetMapping("")
     @ResponseBody
     public RedirectView barraRedirectToIndex(Model model) {
         return new RedirectView("/index");
     }
 
-    @GetMapping("/index")
+    @GetMapping("index")
     @ResponseBody
     public ModelAndView index(Model model) {
         return new ModelAndView("index");
     }
 
-    @GetMapping("/feedback")
+    @GetMapping("feedback")
     @ResponseBody
     public ModelAndView requestForm(Feedback feedback, Model model) {
         model.addAttribute("feedback", feedback);
         return new ModelAndView("formulariocontato");
     }
 
-    @PostMapping("/feedback/add")
+    @PostMapping("feedback/add")
     @ResponseBody
     public RedirectView inserirFeedback(Feedback feedback, BindingResult result, Model model) {
         if (result.hasErrors()) {
@@ -55,19 +48,19 @@ public class FeedBackController {
 
         return new RedirectView("/index");
     }
-    @GetMapping("/quem-somos")
+    @GetMapping("quem-somos")
     @ResponseBody
     public ModelAndView quemSomos() {
         return new ModelAndView("quemsomos");
     }
 
-    @GetMapping("/code-java")
+    @GetMapping("code-java")
     @ResponseBody
     public ModelAndView codeJava() {
         return new ModelAndView("codejava");
     }
 
-    @GetMapping("/list")
+    @GetMapping("feedback-list")
     @ResponseBody
     public ModelAndView feedback(Model model) {
         model.addAttribute("feedbacks", service.buscarTudo());
